@@ -93,6 +93,7 @@ body{
     height: 100%;
     position:absolute;
     top: 0;
+    
 }
 .header-and-banner-con{
     padding-top: 45px;
@@ -171,13 +172,14 @@ body{
 }
 .informationmain-right-con{
     padding-top: 30px;
+    
 }
 .informationmainleft-sec-img img{
     margin-left: -115px;
 }
 .informationmain-right-heading h2{
     line-height: 62px;
-    margin-bottom: 18px;
+    margin-bottom: 25px;
 }
 .informationmain-right-heading h5{
     margin-bottom: 14px;
