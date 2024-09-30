@@ -146,6 +146,7 @@
                method="POST">
                   <!-- Custom Redirect Field -->
                   <input type="hidden" name="_redirect" value="https://www.pentestprecision.com/thanks.html">
+                  <input type="hidden" name="_append" value="false" />
       
                   <div class="row">
                       <div class="col-lg-4 col-md-4 col-12">
@@ -307,35 +308,6 @@
          </div>
       </section>
       <!-- weight-footer-section -->
-      <script>
-         document.getElementById('contactpage').addEventListener('submit', function(e) {
-           e.preventDefault(); // Prevent default form submission
-       
-           var formData = new FormData(this);
-       
-           fetch(this.action, {
-             method: this.method,
-             body: formData,
-             headers: {
-               'Accept': 'application/json' // Optional for handling JSON responses
-             }
-           })
-           .then(function(response) {
-             if (response.ok) {
-               window.location.href = 'https://www.pentestprecision.com/thanks.html';
-             } else {
-               return response.json().then(function(data) {
-                 console.error('Error:', data);
-                 alert('Something went wrong. Please try again.');
-               });
-             }
-           })
-           .catch(function(error) {
-             console.error('Error:', error);
-             alert('Something went wrong. Please try again.');
-           });
-         });
-       </script>
       <script src="assets/js/wow.js"></script>
       <script>
          new WOW().init();
