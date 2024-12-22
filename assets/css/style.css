@@ -136,7 +136,32 @@ body{
 .header-con .contact-btn{
     text-decoration: none;
 }
+/* Upwork Reviews Section */
+.upwork-reviews-section .contact-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0ad3ef;
+  color: #ffffff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
 
+.upwork-reviews-section .contact-btn:hover {
+  background-color: #0a9fef;
+}
+
+.upwork-reviews-section .review-btn {
+  margin-top: 20px;
+}
+
+.star-rating .fa-star {
+  color: #ffd700; /* Gold color for stars */
+}
+
+.star-rating .checked {
+  color: #ffd700;
+}
 /*banner-section-end*/
 /*header-and-banner-sectrion*/
 /*slider-section*/
