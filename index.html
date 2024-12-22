@@ -902,6 +902,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.mi
                      <textarea class="w-100" placeholder="Message" rows="3" name="comments" id="comments"></textarea>
                  </div>
              </div>
+            <div class="row">
+                     <div class="col-lg-12">
+                        <label for="mathQuestion">To prevent spam, please answer:</label>
+                        <span id="mathQuestion"></span>
+                        <input type="number" id="mathAnswer" placeholder="Answer" required>
+                     </div>
+                  </div>
              <div class="row">
                  <div class="col-lg-12 text-center">
                      <button type="submit" id="submit" class="contact-btn">Submit</button>
@@ -911,6 +918,27 @@ href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.mi
         </div>
       </div>
     </section>
+     <script>
+         // Generate a simple math question and validate the answer
+         function generateMathQuestion() {
+            const num1 = Math.floor(Math.random() * 10);
+            const num2 = Math.floor(Math.random() * 10);
+            const questionText = `${num1} + ${num2} = ?`;
+            document.getElementById("mathQuestion").textContent = questionText;
+            return num1 + num2;
+         }
+      
+         let correctAnswer = generateMathQuestion();
+      
+         function validateMathAnswer() {
+            const userAnswer = parseInt(document.getElementById("mathAnswer").value, 10);
+            if (userAnswer !== correctAnswer) {
+               alert("Please answer the math question correctly to submit the form.");
+               return false;
+            }
+            return true;
+         }
+      </script>
     <!--form-section-->
     <!-- weight-footer-section -->
     <section>
